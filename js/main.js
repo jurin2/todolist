@@ -34,7 +34,7 @@ function render(){
                                 <div class="task-done">${taskList[i].taskContent}</div>
                                 <div>
                                     <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                                    <button onclick="deleteTask()">Delete</button>
+                                    <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
                                 </div>
                             </div>`
         }else{
@@ -42,7 +42,7 @@ function render(){
                                 <div>${taskList[i].taskContent}</div>
                                 <div>
                                     <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                                    <button onclick="deleteTask()">Delete</button>
+                                    <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
                                 </div>
                             </div>`
         }
@@ -61,8 +61,8 @@ function toggleComplete(id){
     console.log(taskList);
 }
 
-function deleteTask(){
-    console.log("삭제하자");
+function deleteTask(id){
+    console.log("삭제하자",id);
 }
 
 
