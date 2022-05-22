@@ -62,7 +62,14 @@ function toggleComplete(id){
 }
 
 function deleteTask(id){
-    console.log("삭제하자",id);
+    for(let i=0; i<taskList.length; i++){
+        if(taskList[i].id == id){
+            taskList.splice(i,1)
+            break;
+        }
+    }
+    render();
+    console.log(taskList);
 }
 
 
