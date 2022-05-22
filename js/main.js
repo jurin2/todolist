@@ -34,7 +34,7 @@ function render(){
                                 <div class="task-done">${taskList[i].taskContent}</div>
                                 <div>
                                     <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                                    <button>Delete</button>
+                                    <button onclick="deleteTask()">Delete</button>
                                 </div>
                             </div>`
         }else{
@@ -42,7 +42,7 @@ function render(){
                                 <div>${taskList[i].taskContent}</div>
                                 <div>
                                     <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                                    <button>Delete</button>
+                                    <button onclick="deleteTask()">Delete</button>
                                 </div>
                             </div>`
         }
@@ -60,6 +60,11 @@ function toggleComplete(id){
     render();
     console.log(taskList);
 }
+
+function deleteTask(){
+    console.log("삭제하자");
+}
+
 
 function randomIDGenerate(){
     return '_' + Math.random().toString(36).substring(2, 9)
