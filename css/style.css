@@ -31,7 +31,7 @@ body{
 }
 #under-line{
     height: 4px;
-    background-color: tomato;
+    background-color: rgb(4, 95, 39);
     position: absolute;
     width: 65px;
     left: 0;
@@ -45,4 +45,7 @@ body{
 }
 .task-done{
     text-decoration: line-through;
+}
+.task-tabs div{
+    cursor: pointer;
 }
